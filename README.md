@@ -1,28 +1,36 @@
-# Angular2 + Socket.io
+# total.js-scoket.io-angular2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.4.
+## Sample integration socket.io with Total.js and Angular 2
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Install the total.js in project directory
+  
+  ```
+npm install total.js
+  ```
 
-## Code scaffolding
+2. Install Angular2, socket.io and another modules the dependencies in /client 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+  ```
+npm install
+  ```
 
-## Build
+4. run build for Angular2 and Auth0 in /client. Bundled files will be copied to /client/dist directory 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+  ```
+  npm run build
+    ```
+5. run deploy to copy /client/dist directory to /public in total.js 
 
-## Running unit tests
+  ```
+  npm run deploy
+    ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+6. Start the server from the root directory of project
 
-## Running end-to-end tests
+  ```
+  node server
+    ```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+6. Visit http://localhost:8000
