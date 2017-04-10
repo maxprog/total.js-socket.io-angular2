@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import {SocketIOService} from '../../services/socket-io.service';
 
 @Component({
-    moduleId:module.id,
     selector: 'chat',
     templateUrl: 'chat.component.html'
 })

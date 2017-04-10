@@ -1,26 +1,4 @@
-<!--<script>
-	var socket=io.connect();
-	socket.on('receive',function(message){
-    addMessage(message);
-	});
-	var sendMessage = function(){
-		var value=document.getElementById('message').value;
-		console.log('Sent '+value);
-		socket.emit('message',{message:value});
-		addMessage(value);
-		document.getElementById('message').value='';
-	};
-   var keyPress = function(event){
-		if (event.keyCode==13){
-			sendMessage();
-		}
-   };
-   var addMessage = function(message){
-	   console.log('Received %s',message);
-      document.getElementById("messages").value += message+"\n";
-   };
-</script>
--->
+
 
 <hr />
 <div class="row">
