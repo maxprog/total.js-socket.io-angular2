@@ -15,9 +15,10 @@ export class SocketIOService{
     receiveMessages(){
         let observable = new Observable((observer:any) => {
             this.socket = io(this.url);
-            this.socket.on('receive', (message:string) => {
-              console.log('Received %s',message); 
-                observer.next(message);
+            this.socket.on('receive', (data:any) => {
+                console.log('message',data);  
+              console.log('Received %s',data); 
+                observer.next(data);
             });
             return () => {
                 this.socket.disconnect();

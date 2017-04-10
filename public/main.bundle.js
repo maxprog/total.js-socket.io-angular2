@@ -23,9 +23,10 @@ var SocketIOService = (function () {
         var _this = this;
         var observable = new __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"](function (observer) {
             _this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__(_this.url);
-            _this.socket.on('receive', function (message) {
-                console.log('Received %s', message);
-                observer.next(message);
+            _this.socket.on('receive', function (data) {
+                console.log('message', data);
+                console.log('Received %s', data);
+                observer.next(data);
             });
             return function () {
                 _this.socket.disconnect();
@@ -231,7 +232,7 @@ module.exports = "\t<div class=\"container-background\">\r\n\t\t<div class=\"con
 /***/ 477:
 /***/ (function(module, exports) {
 
-module.exports = "<!--<script>\r\n\tvar socket=io.connect();\r\n\tsocket.on('receive',function(message){\r\n    addMessage(message);\r\n\t});\r\n\tvar sendMessage = function(){\r\n\t\tvar value=document.getElementById('message').value;\r\n\t\tconsole.log('Sent '+value);\r\n\t\tsocket.emit('message',{message:value});\r\n\t\taddMessage(value);\r\n\t\tdocument.getElementById('message').value='';\r\n\t};\r\n   var keyPress = function(event){\r\n\t\tif (event.keyCode==13){\r\n\t\t\tsendMessage();\r\n\t\t}\r\n   };\r\n   var addMessage = function(message){\r\n\t   console.log('Received %s',message);\r\n      document.getElementById(\"messages\").value += message+\"\\n\";\r\n   };\r\n</script>\r\n-->\r\n\r\n<hr />\r\n<div class=\"row\">\r\n\t<div class=\"form-group\">\r\n  <label for=\"comment\">Messages</label>\r\n  <textarea class=\"form-control\" rows=\"10\" id=\"messages\" readonly name=\"messages\">{{messages.join('\\n')}}</textarea>\r\n</div>\r\n\t\t\t \r\n\r\n\t\t</div>\r\n<div class=\"row\">\r\n\t\t\t<div class=\"col-md-12 \">\r\n\t\t\t\t\t <div class=\"input-group\">\r\n      <input type=\"text\" id=\"message\" class=\"form-control\" [(ngModel)]=\"message\" name=\"message\" placeholder=\"Input message...\" (keyup.enter)=\"sendMessage()\">\r\n      <span class=\"input-group-btn\">\r\n        <button class=\"btn btn-success\" type=\"button\" (click)=\"sendMessage()\"><span class=\"fa fa-envelope\"> </span>SUBMIT</button>\r\n      </span>\r\n    </div><!-- /input-group -->\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\r\n\r\n\t\r\n<br />\r\n<div class=\"center\">\r\n\t\r\n\r\n\t<h3><b>Total.js with socket.io</b></h3>\r\n\t\tThe node.js framework for all web developers with everything what you need.\r\n</div>\r\n<br />\r\n<br />"
+module.exports = "<!--<script>\r\n\tvar socket=io.connect();\r\n\tsocket.on('receive',function(message){\r\n    addMessage(message);\r\n\t});\r\n\tvar sendMessage = function(){\r\n\t\tvar value=document.getElementById('message').value;\r\n\t\tconsole.log('Sent '+value);\r\n\t\tsocket.emit('message',{message:value});\r\n\t\taddMessage(value);\r\n\t\tdocument.getElementById('message').value='';\r\n\t};\r\n   var keyPress = function(event){\r\n\t\tif (event.keyCode==13){\r\n\t\t\tsendMessage();\r\n\t\t}\r\n   };\r\n   var addMessage = function(message){\r\n\t   console.log('Received %s',message);\r\n      document.getElementById(\"messages\").value += message+\"\\n\";\r\n   };\r\n</script>\r\n-->\r\n\r\n<hr />\r\n<div class=\"row\">\r\n\t<div class=\"form-group\">\r\n  <label for=\"comment\">Messages</label>\r\n  <textarea class=\"form-control\" rows=\"10\" id=\"messages\" readonly name=\"messages\">{{messages.join('\\n')}}</textarea>\r\n</div>\r\n\t\t\t \r\n\r\n\t\t</div>\r\n<div class=\"row\">\r\n\t\t\t<div class=\"col-md-12 \">\r\n\t\t\t\t\t <div class=\"input-group\">\r\n      <input type=\"text\" id=\"message\" class=\"form-control\" [(ngModel)]=\"message\" name=\"message\" placeholder=\"Input message...\" (keyup.enter)=\"sendMessage()\">\r\n      <span class=\"input-group-btn\">\r\n        <button class=\"btn btn-success\" type=\"button\" (click)=\"sendMessage()\"><span class=\"fa fa-envelope\"> </span>SUBMIT</button>\r\n      </span>\r\n    </div><!-- /input-group -->\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\r\n\r\n\t\r\n<br />\r\n<div class=\"center\">\r\n\t\r\n\r\n\t<h3><b>Total.js and Angular2 with socket.io</b></h3>\r\n\t\tThe node.js framework for all web developers with everything what you need.\r\n</div>\r\n<br />\r\n<br />"
 
 /***/ }),
 

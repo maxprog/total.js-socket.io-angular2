@@ -11,7 +11,7 @@ console.log('New connection');
 
 socket.on('message',function(data){
     console.log(data);
-    socket.broadcast.emit('receive',data.message);
+    socket.broadcast.emit('receive', data);
 
     });
 });
